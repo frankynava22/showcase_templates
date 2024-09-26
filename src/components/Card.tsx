@@ -22,9 +22,9 @@ const CardContainer = styled.div<CardContainerProps>`
   padding: 2rem;
 
   @media (max-width: 768px) {
-    padding: 1.5rem;  /* Smaller padding for mobile */
-    margin: 1em auto; /* Adjust margin for mobile */
-    width: 90%;       /* Adjust width for mobile */
+    max-width: 90%;     /* Reduce the card width for mobile */
+    padding: 1rem;      /* Smaller padding for mobile */
+    margin: 1em auto;   /* Smaller margin for mobile */
   }
 `;
 
