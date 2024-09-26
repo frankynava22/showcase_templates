@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-interface CardContainerProps{
+interface CardContainerProps {
   bgColor: string;
 }
 
 interface CardProps {
-  preview: string;  
-  color: string;   
-  type: string;     
-  time: string;    
-  templatecode: string; 
-  link: string;    
+  preview: string;
+  color: string;
+  type: string;
+  time: string;
+  templatecode: string;
+  link: string;
 }
 
 const CardContainer = styled.div<CardContainerProps>`
@@ -19,8 +19,13 @@ const CardContainer = styled.div<CardContainerProps>`
   max-width: 400px;
   margin: 2em auto;
   border-radius: 15px;
-  margin-bottom: 1rem;
   padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;  /* Smaller padding for mobile */
+    margin: 1em auto; /* Adjust margin for mobile */
+    width: 90%;       /* Adjust width for mobile */
+  }
 `;
 
 const HeroImageContainer = styled.a`
@@ -60,6 +65,10 @@ const HeroImage = styled.img`
 const MainContent = styled.main`
   padding: 1.2em 0;
 
+  @media (max-width: 768px) {
+    padding: 1em 0;  /* Adjust padding for mobile */
+  }
+
   h1 {
     font: var(--var-heading);
     color: var(--var-lightest);
@@ -75,6 +84,12 @@ const FlexRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;  /* Stack items vertically on mobile */
+    align-items: flex-start;
+    gap: 1rem;               /* Add space between stacked items */
+  }
 `;
 
 const CoinBase = styled.div`
@@ -86,6 +101,10 @@ const CoinBase = styled.div`
     font: var(--var-small-heading);
     color: var(--var-lightest);
   }
+
+  @media (max-width: 768px) {
+    padding: 0.5em 0;  /* Adjust padding for mobile */
+  }
 `;
 
 const TimeLeft = styled.div`
@@ -96,6 +115,10 @@ const TimeLeft = styled.div`
   p {
     font: var(--var-para);
   }
+
+  @media (max-width: 768px) {
+    padding: 0.5em 0;  /* Adjust padding for mobile */
+  }
 `;
 
 const SmallImage = styled.img`
@@ -103,21 +126,16 @@ const SmallImage = styled.img`
   margin-right: 0.5em;
 `;
 
-
 const WebsiteType = styled.p`
   text-align: center;
-`
+`;
 
-
-const Card: React.FC<CardProps> = ({preview, color, type, time, templatecode, link}) => {
+const Card: React.FC<CardProps> = ({ preview, color, type, time, templatecode, link }) => {
   return (
     <div>
-      <CardContainer bgColor = {color}>
+      <CardContainer bgColor={color}>
         <HeroImageContainer href={link} target="_blank">
-          <HeroImage
-            src={preview}
-            alt="Spinning glass cube"
-          />
+          <HeroImage src={preview} alt="Spinning glass cube" />
         </HeroImageContainer>
         <MainContent>
           <WebsiteType>{type}</WebsiteType>
@@ -126,10 +144,7 @@ const Card: React.FC<CardProps> = ({preview, color, type, time, templatecode, li
               <h2>{templatecode}</h2>
             </CoinBase>
             <TimeLeft>
-              <SmallImage
-                src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png"
-                alt="clock"
-              />
+              <SmallImage src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png" alt="clock" />
               <p>{time}</p>
             </TimeLeft>
           </FlexRow>
