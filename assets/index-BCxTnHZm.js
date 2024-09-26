@@ -114,7 +114,7 @@ Error generating stack: `+o.message+`
   margin-right: 0.5em;
 `,Um=Qe.p`
   text-align: center;
-`,Xo=({preview:e,color:t,type:n,time:r,templatecode:l,link:o})=>b.jsx("div",{children:b.jsxs($m,{bgColor:t,children:[b.jsx(Im,{href:o,target:"_blank",children:b.jsx(Om,{src:e,alt:"Spinning glass cube"})}),b.jsxs(Dm,{children:[b.jsx(Um,{children:n}),b.jsxs(jm,{children:[b.jsx(Mm,{children:b.jsx("h2",{children:l})}),b.jsxs(Fm,{children:[b.jsx(Am,{src:"https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png",alt:"clock"}),b.jsx("p",{children:r})]})]})]})]})}),Zo="/assets/picture-93ACViu_.png",Bm=Qe.div`
+`,Xo=({preview:e,color:t,type:n,time:r,templatecode:l,link:o})=>b.jsx("div",{children:b.jsxs($m,{bgColor:t,children:[b.jsx(Im,{href:o,target:"_blank",children:b.jsx(Om,{src:e,alt:"Spinning glass cube"})}),b.jsxs(Dm,{children:[b.jsx(Um,{children:n}),b.jsxs(jm,{children:[b.jsx(Mm,{children:b.jsx("h2",{children:l})}),b.jsxs(Fm,{children:[b.jsx(Am,{src:"https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png",alt:"clock"}),b.jsx("p",{children:r})]})]})]})]})}),Zo="/showcase_templates/assets/picture-93ACViu_.png",Bm=Qe.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
