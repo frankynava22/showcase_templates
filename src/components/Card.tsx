@@ -1,6 +1,19 @@
 import styled from "styled-components";
 
-const CardContainer = styled.div`
+interface CardContainerProps{
+  bgColor: string;
+}
+
+interface CardProps {
+  preview: string;  
+  color: string;   
+  type: string;     
+  time: string;    
+  templatecode: string; 
+  link: string;    
+}
+
+const CardContainer = styled.div<CardContainerProps>`
   background-color: ${(props) => props.bgColor};
   width: 100%;
   max-width: 400px;
@@ -96,7 +109,7 @@ const WebsiteType = styled.p`
 `
 
 
-const Card = ({preview, color, type, time, templatecode, link}) => {
+const Card: React.FC<CardProps> = ({preview, color, type, time, templatecode, link}) => {
   return (
     <div>
       <CardContainer bgColor = {color}>
