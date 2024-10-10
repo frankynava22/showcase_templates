@@ -5,3 +5,7 @@ yarn run dev
 
 # Card component
 all attributes are just props to pass
+
+# deployment
+yarn build
+yarn deploy
